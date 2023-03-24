@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{recipe.name}}</title>
+    <link rel="icon" href="/static/images/tim.ico">
+    <link rel="stylesheet" type="text/css" href="/static/css/misc.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/menubar.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/recipe.css">
+    
+
+
+</head>
+<body>
+    <div id="menubar">
+        <div id="webpagelogo">
+            <a href="/">
+            <img id="logoimage" src="/static/images/Mother of all omelettes-02.png">
+            </a>
+        </div>
+
+
+        <div id="categories">
+
+            <div class="category">
+                <button class="categorybutton"><a href="/recipes/Alcohol">Alcohol</a></button>
+                <ul class="categorydropdown">
+                        <li><a href="/recipes/Shots">Shots</a></li>
+                        <li><a href="/recipes/Drinks">Drinks</a></li>
+                        <li><a href="/recipes/Beer">Beer</a></li>
+                        <li><a href="/recipes/Wine">Wine</a></li>
+                        <li><a href="/recipes/Spirits">Spirits</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <button class="categorybutton"><a href="/recipes/Appetisers">Appetisers</a></button>
+                <ul class="categorydropdown">
+                        <li><a href="/recipes/Sallad">Sallad</li>
+                        <li><a href="/recipes/Seafood">Seafood</a></li>
+                        <li><a href="/recipes/Soups">Soups</a></li>
+                        <li><a href="/recipes/Bread">Bread</a></li>
+                        
+                </ul>
+            </div>
+
+            <div class="category">
+                <button class="categorybutton"><a href="/recipes/Maincourse">Maincourse</a></button>
+                <ul class="categorydropdown">
+                        <li><a href="/recipes/Maincourse/Alacarte">A la carte</a></li>
+                        <li><a href="/recipes/Maincourse/Seafood">Seafood</a></li>
+                        <li><a href="/recipes/Maincourse/Pasta">Pasta</a></li>
+                        <li><a href="/recipes/Maincourse/Sallads">Sallads</a></li>
+                        <li><a href="/recipes/Maincourse/Asian">Asian</a></li>
+                        <li><a href="/recipes/Maincourse/Vegitarian">Vegitarian</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <button class="categorybutton"><a href="/recipes/Desserts">Desserts</a></button>
+                <ul class="categorydropdown">
+                        <li><a href="/recipes/Icecream">Ice Cream</a></li>
+                        <li><a href="/recipes/Custarddesserts">Custard desserts</a></li>
+                        <li><a href="/recipes/Dessertbakery">Dessert bakery</a></li>
+                </ul>
+            </div>
+
+            <div class="category">
+                <button class="categorybutton"><a href="/recipes/Bakery">Bakery</a></button>
+                <ul class="categorydropdown">
+                        <li><a href="/recipes/Bread">Bread</a></li>
+                        <li><a href="/recipes/Pies">Pies</a></li>
+                        <li><a href="/recipes/Pastries">Pastries</a></li>
+                </ul>
+            </div>
+            
+
+        </div>
+
+
+        <div id="sidemenu">
+                <div class="Menuline"></div>
+                <div class="Menuline"></div>
+                <div class="Menuline"></div>
+        </div>
+
+
+    </div>
+
+    <div id="recipecontainer">
+        <div class="recipe">
+            
+            <img class="recipepic" img src="{{ recipe.image }}" alt="{{ recipe.name }}">
+            <div id="recipetitle">
+                {{recipe.name}}
+                <div id="flavourtext">
+                    {{recipe.flavourtext}}
+                </div>
+            </div>
+            <div id="information">
+                <div id="portions">
+                    Portions: {{recipe.portions}}
+                </div>
+                <div id="preptime">
+                    Preptime: {{recipe.preptime}}
+                </div>
+                <div id="cooktime">
+                    Cooktime: {{recipe.cookingtime}}
+                </div>
+            </div>
+            
+            <div id="recipeingredients">
+                <div id="ingredientstitle">Ingredients</div>
+                {% for ingredient in recipe.ingredients %}
+                <div id="ingredients">
+                    {{ingredient}}
+                </div>
+                {% endfor %}
+                
+            </div>
+            <div id="recipeinstructions">
+                <div id="instructionstitle">Instructions</div>
+                {% for instruction in recipe.instructions %}
+                <div id="instructions">
+                    {{instruction}}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+
+    </div>
+
+
+
+
+
+</body>
+    
+
+</html>

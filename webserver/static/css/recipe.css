@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'title';
+    src: url(../misc/fonts/OpenSans-Bold.ttf);
+}
+
+#recipecontainer{
+    width: 40vw;
+    /* background-color: red; */
+    margin-left: 30.5vw;
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height:72%;
+    margin-top:10vw;
+    z-index: -1;
+    background-color: #f1f1f1;
+    border-radius: 1vw;
+    padding-bottom: 2vw;
+}
+
+
+
+.recipe{
+    overflow-style: auto;
+    overflow-y: scroll;
+    /* display: grid;
+    grid-template-columns: 18vw 25vw;
+    grid-template-rows: auto 45vw; */
+}
+
+.recipepic{
+    width: 100%;
+    height: 20vw;
+    /* margin-left: 0.5vw;
+    margin-top: .5vw; */
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+}
+
+#recipetitle{
+    background-color: white;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 36vw;
+    height: 5.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -1.5vw;
+    z-index: 1000;
+    letter-spacing: .5vw;
+    font-size: 1.5vw;
+    color: #312f40;
+}
+
+#flavourtext{
+    margin-top: .5vw;
+    font-size: .8vw;
+    line-height: 1.5vw;
+    color: #312f40;
+}
+
+#information{
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .1vw;
+    font-size: .9vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    color: #312f40;
+}
+
+#portions{
+    float: left;
+}
+
+#preptime{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cooktime{
+
+}
+
+#recipeingredients{
+    float: left;
+    margin-top: 2vw;
+    /* background-color: green; */
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 12vw;
+    margin-left: 2vw;
+}
+
+#ingredientstitle{
+    font-size: 1.3vw;
+}
+
+#ingredients{
+    margin-top: 1vw;
+    font-size: 1vw;
+    line-height: 1.5vw;
+
+}
+
+#recipeinstructions{
+    float: right;
+    margin-top: 2vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* background-color: red; */
+    margin-right: 2vw;
+    width: 22vw;
+}
+
+#instructionstitle{
+    margin-left: 3vw;
+    font-size: 1.3vw;
+    text-align: center;
+}
+
+#instructions{
+    margin-top: 1vw;
+    font-size: 1vw;
+    line-height: 1.5vw;
+    margin-left: 200px;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
